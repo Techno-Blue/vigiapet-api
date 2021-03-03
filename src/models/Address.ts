@@ -6,25 +6,16 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('users')
-class User {
+@Entity('address')
+class Address {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column()
-  name: string;
+  cep: string;
 
   @Column()
-  email: string;
-
-  @Column()
-  password: string;
-
-  @Column()
-  phone: string;
-
-  @Column()
-  whatsapp: string;
+  complement: string;
 
   @Column(CreateDateColumn)
   created_at: Date;
@@ -33,4 +24,4 @@ class User {
   updated_at: Date;
 }
 
-export default User;
+export default Address;

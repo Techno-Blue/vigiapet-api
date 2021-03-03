@@ -4,27 +4,25 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
 } from 'typeorm';
+import Animal from './Animal';
 
-@Entity('users')
-class User {
+@Entity('breeds')
+class Breed {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column()
+  animal_id: string;
+
+  @ManyToOne(() => Animal)
+  @JoinColumn({ name: 'animal_id' })
+  animal: Animal;
+
+  @Column()
   name: string;
-
-  @Column()
-  email: string;
-
-  @Column()
-  password: string;
-
-  @Column()
-  phone: string;
-
-  @Column()
-  whatsapp: string;
 
   @Column(CreateDateColumn)
   created_at: Date;
@@ -33,4 +31,4 @@ class User {
   updated_at: Date;
 }
 
-export default User;
+export default Breed;

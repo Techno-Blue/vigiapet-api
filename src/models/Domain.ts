@@ -6,8 +6,8 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('users')
-class User {
+@Entity('domains')
+class Domain {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -15,16 +15,7 @@ class User {
   name: string;
 
   @Column()
-  email: string;
-
-  @Column()
-  password: string;
-
-  @Column()
-  phone: string;
-
-  @Column()
-  whatsapp: string;
+  description: string;
 
   @Column(CreateDateColumn)
   created_at: Date;
@@ -33,4 +24,4 @@ class User {
   updated_at: Date;
 }
 
-export default User;
+export default Domain;
