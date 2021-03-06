@@ -7,8 +7,8 @@ import {
   ManyToOne,
   JoinColumn,
 } from 'typeorm';
+import UserServiceStep from '@modules/users/infra/typeorm/entities/UserServiceStep';
 import PetService from './PetService';
-import UserServiceStep from './UserServiceStep';
 
 @Entity('petServiceSteps')
 class PetServiceStep {

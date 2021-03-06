@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import sessionsRouter from './sessions.routes';
-import usersRouter from './user.routes';
+import usersRouter from '@modules/users/infra/http/routes/user.routes';
+import sessionsRouter from '@modules/users/infra/http/routes/sessions.routes';
 
 const routes = Router();
 

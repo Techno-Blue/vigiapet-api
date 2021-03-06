@@ -7,7 +7,7 @@ import {
   ManyToOne,
   JoinColumn,
 } from 'typeorm';
-import Animal from './Animal';
+import Animal from '@modules/pets/infra/typeorm/entities/Animal';
 import User from './User';
 
 @Entity('userServices')
