@@ -29,7 +29,7 @@ export default class CreatePetServices1614461245717
           },
           {
             name: 'value',
-            type: 'numeric(7, 2)',
+            type: 'money',
           },
           {
             name: 'deliver',
@@ -47,7 +47,7 @@ export default class CreatePetServices1614461245717
           },
           {
             name: 'changeValue',
-            type: 'numeric(7, 2)',
+            type: 'money',
             isNullable: true,
           },
           {
